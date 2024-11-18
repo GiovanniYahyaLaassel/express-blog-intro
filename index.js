@@ -19,35 +19,35 @@ const posts = [
     {
         title: 'Ciambellone della nonna',
         content: 'Un dolce buono per la colazione',
-        image: 'images\ciambellone.jpeg',
+        image: 'pubblic\images\ciambellone.jpeg',
         tags: ['tag1', 'tag2', 'tag3']
 
     },
     {
         title: 'Cracker di Barbabietole',
         content: 'Snack',
-        image: 'images\cracker_barbabietola.jpeg',
+        image: 'pubblic\images\cracker_barbabietola.jpeg',
         tags: ['tag4', 'tag5', 'tag6']
 
     },
     {
         title: 'Pane Fritto Dolce',
         content: 'Una delizia fritta',
-        image: 'images\pane_fritto_dolce.jpeg',
+        image: 'pubblic\images\pane_fritto_dolce.jpeg',
         tags: ['tag7', 'tag8', 'tag9']
 
     },
     {
         title: 'Pasta di Barbabietola',
         content: 'Pasta colorata',
-        image: 'images\pasta_barbabietola.jpeg',
+        image: 'pubblic\images\pasta_barbabietola.jpeg',
         tags: ['tag10', 'tag11', 'tag12']
 
     },
     {
         title: 'Torta Paesana',
         content: 'La tradizione contadina',
-        image: 'images\torta_paesana.jpeg',
+        image: 'pubblic\images\torta_paesana.jpeg',
         tags: ['tag13', 'tag14', 'tag15']
 
     },
@@ -66,3 +66,8 @@ app.get('/bacheca', (req, res) => {
 
     res.json(response);  
 }); 
+
+
+// configuro gli asset statici per far vedere le immagini
+
+app.use(express.static('pubblic'));
