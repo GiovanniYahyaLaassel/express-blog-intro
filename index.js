@@ -56,3 +56,13 @@ const posts = [
 app.get('/posts', (req, res) => {
     res.json(posts);
 })
+
+// Creo una rotta bacheca 
+app.get('/bacheca', (req, res) => {
+    const response = {
+        count: posts.length,  //conto i post
+        posts: posts // la lista
+    };
+
+    res.json(response);  
+}); 
